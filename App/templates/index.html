@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Cyber Incidents Detection</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='images/bg.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .overlay {
+      background: rgba(0,0,0,0.6);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="{{ url_for('index') }}">Cyber Incidents Detection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Register</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="overlay">
+    <div>
+      <h1 class="display-4 fw-bold">AI-Powered System for an Efficient and Effective Cyber Incidents Detection and Response in Cloud Environments 15</h1>
+      <p class="lead">The growing complexity and frequency of cyber threats in cloud environments call for innovative and automated solutions to maintain effective and efficient incident response. This study tackles this urgent issue by introducing a cutting-edge AI-driven cyber incident response system specifically designed for cloud platforms. Unlike conventional methods, our system employs advanced Artificial Intelligence (AI) and Machine Learning (ML) techniques to provide accurate, scalable, and seamless integration with platforms like Google Cloud and Microsoft Azure. Key features include an automated pipeline that integrates Network Traffic Classification, Web Intrusion Detection, and Post-Incident Malware Analysis into a cohesive framework implemented via a Flask application. To validate the effectiveness of the system, we tested it using three prominent datasets: NSL-KDD, UNSW-NB15, and CIC-IDS-2017. The Random Forest model achieved accuracies of 90%, 75%, and 99%, respectively, for the classification of network traffic, while it attained 96% precision for malware analysis. Furthermore, a neural network-based malware analysis model set a new benchmark with an impressive accuracy rate of 99%. By incorporating deep learning models with cloud-based GPUs and TPUs, we demonstrate how to meet high computational demands without compromising efficiency. Furthermore, containerisation ensures that the system is both scalable and portable across a wide range of cloud environments. By reducing incident response times, lowering operational risks, and offering costeffective deployment, our system equips organizations with a robust tool to proactively safeguard their cloud infrastructure. This innovative integration of AI and containerised architecture not only sets a new benchmark in threat detection but also significantly advances the state-of-the-art in cybersecurity, promising transformative benefits for critical industries. This research makes a significant contribution to the field of AI-powered cybersecurity by showcasing the powerful combination of AI models and cloud infrastructure to fill critical gaps in cyber incident response. Our findings emphasise the superior performance of Random Forest and deep learning models in accurately identifying and classifying cyber threats, setting a new standard for real-world deployment in cloud environments.</p>
+      </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
