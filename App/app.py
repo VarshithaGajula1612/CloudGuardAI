@@ -7,7 +7,7 @@ import numpy as np
 import os
 
 app = Flask(__name__)
-app.secret_key = 'unmyeong'
+app.secret_key = os.environ.get("FLASK_SECRET_KEY", "unmyeong")
 
 DATABASE = 'database.db'
 
@@ -275,4 +275,6 @@ def proposed():
     return render_template('proposed.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    debug = os.environ.get("FLASK_DEBUG", "").strip() in {"1", "true", "True", "yes", "YES"}
+    port = int(os.environ.get("PORT", "5000"))
+    app.run(host="0.0.0.0", port=port, debug=debug)
